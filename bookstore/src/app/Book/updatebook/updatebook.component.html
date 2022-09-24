@@ -1,0 +1,107 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Update Book</h3>
+  <form (ngSubmit)="onUpdate()">
+    <div class="form-group">
+      <label>Book ID</label>
+      <input
+        [(ngModel)]="category.categoryId"
+        type="number"
+        class="form-control"
+        id="categoryId"
+        value="{{ book.bookId }}"
+        name="bookId"
+        disabled
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Book Title</label>
+      <input
+        [(ngModel)]="book.title"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.title }}"
+        name="bookName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Category ID</label>
+      <input
+        [(ngModel)]="book.category.categoryId"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.category.categoryId }}"
+        name="categoryId"
+        disabled
+      />
+    </div>
+    <div class="form-group">
+      <label>Category Name</label>
+      <input [(ngModel)]="book.category.categoryName" type="text" class
+      ="form-control" id = "categoryName" value="{{
+        book.category.categoryName
+      }}" name = "categoryName" disabled=>
+    </div>
+    <div class="form-group">
+      <label>Author</label>
+      <input
+        [(ngModel)]="book.author"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.author }}"
+        name="author"
+      />
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input
+        [(ngModel)]="book.description"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.description }}"
+        name="description"
+      />
+    </div>
+    <div class="form-group">
+      <label>ISBN</label>
+      <input
+        [(ngModel)]="book.isbn"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.isbn }}"
+        name="isbn"
+      />
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input
+        [(ngModel)]="book.price"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.price }}"
+        name="price"
+      />
+    </div>
+    <div class="form-group">
+      <label>Publish Date</label>
+      <input
+        [(ngModel)]="book.publishDate"
+        type="text"
+        class="form-control"
+        id="categoryName"
+        value="{{ book.publishDate }}"
+        name="publishDate"
+      />
+    </div>
+
+    <button class="btn btn-success" type="submit">Update</button>
+  </form>
+
+  {{ book | json }}
+</div>

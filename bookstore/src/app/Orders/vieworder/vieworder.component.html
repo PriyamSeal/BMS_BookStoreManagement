@@ -1,0 +1,57 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+</head>
+
+<h1><span style="color: red">O</span>rders</h1>
+
+<table class="fl-table">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Customer ID</th>
+      <th>Customer Name</th>
+      <th>Book ID</th>
+      <th>Book Title</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Pin Code</th>
+
+      <th>Order Date</th>
+      <th>Order Total</th>
+      <th>Quantity</th>
+      <th>Status</th>
+      <th>Payment Method</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let orders of orders">
+      <td>{{ orders.orderId }}</td>
+      <td>{{ orders.customer.customerId }}</td>
+      <td>{{ orders.customer.fullName }}</td>
+      <td>{{ orders.book.bookId }}</td>
+      <td>{{ orders.book.title }}</td>
+      <td>{{ orders.customer.address.address }}</td>
+      <td>{{ orders.customer.address.city }}</td>
+      <td>{{ orders.customer.address.country }}</td>
+      <td>{{ orders.customer.address.pincode }}</td>
+      <td>{{ orders.orderDate }}</td>
+      <td>{{ orders.orderTotal }}</td>
+      <td>{{ orders.quantity }}</td>
+      <td>{{ orders.status }}</td>
+      <td>{{ orders.paymentMethod }}</td>
+      <td>
+        <button (click)="deleteOrder(orders.orderId)" class="btn btn-danger">
+          Cancel
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

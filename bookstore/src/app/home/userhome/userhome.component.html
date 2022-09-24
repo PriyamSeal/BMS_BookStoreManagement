@@ -1,0 +1,59 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/adminhome']"
+    ><span style="color: red; font-size: 35px; font-weight: 400">W</span>elcome
+    <span style="color: red; font-size: 35px">U</span>ser!</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/viewbookcustomer']">Book</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/customerprofile']">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/customerorder']">My Orders</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div class="navbar-header">
+    <button
+      *ngIf="loggedIn"
+      (click)="logOut()"
+      type="button"
+      class="btn btn-danger navbar-brand pull-right"
+    >
+      Log Out
+    </button>
+  </div> -->
+
+  <!-- <div class="navigation">
+    <a class="button" href="">
+      <img src="assets/img/img4.svg" />
+
+      <div class="logout" *ngIf="loggedIn"
+      (click)="logOut()">LOGOUT</div>
+    </a>
+  </div> -->
+</nav>
